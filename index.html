@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nimble Frontend</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'nim-blue': '#1e3a8a',
+            'nim-light': '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom slider styling */
+    .slider {
+      background: #e2e8f0;
+      outline: none;
+      transition: background 0.3s ease;
+    }
+
+    .slider::-webkit-slider-thumb {
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #3b82f6;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+      background: #2563eb;
+      transform: scale(1.1);
+    }
+
+    .slider::-moz-range-thumb {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #3b82f6;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .slider::-moz-range-thumb:hover {
+      background: #2563eb;
+      transform: scale(1.1);
+    }
+
+    /* Smooth transitions for dynamic content */
+    #toolInterface {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gray-200">
+  <div id="output" class="container mx-auto px-6 py-8"></div>
+  <script src="renderer.js"></script>
+</body>
+
+</html>
