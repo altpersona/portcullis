@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Electron build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.backup.*
+*.bak
+*.7z
+
+# Working files that shouldn't be committed
+*.working.*
+*_backup.*
+*_old.*
+*_new.*
+Untitled-*
+const *.txt
+
+# Package-lock (optional - can be included if desired)
+# package-lock.json
