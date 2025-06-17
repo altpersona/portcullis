@@ -1,8 +1,24 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
-const { extractSections } = require('./extractUsage');
-const { spawnSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+
+// Debug: Check what files are available at runtime
+console.log('App directory:', __dirname);
+console.log('Available files:', fs.readdirSync(__dirname));
+
+// Try to require extractUsage with better error handling
+let extractSections;
+try {
+  const extractUsage = require('./extractUsage');
+  extractSections = extractUsage.extractSections;
+  console.log('Successfully loaded extractUsage module');
+} catch (error) {
+  console.error('Failed to load extractUsage module:', error);
+  // Provide a fallback function
+  extractSections = () => ({ usage: 'Module loading failed', options: '' });
+}
+
+const { spawnSync } = require('child_process');
 
 function createWindow () {
   const win = new BrowserWindow({
