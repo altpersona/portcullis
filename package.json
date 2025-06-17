@@ -1,7 +1,7 @@
 {
   "name": "portcullis",
   "productName": "Portcullis",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "A modern GUI frontend for Neverwinter.nim CLI tools",
   "author": "Your Name",
   "main": "main.js",
@@ -24,7 +24,6 @@
     "d&d",
     "bioware"
   ],
-  "dependencies": {},
   "devDependencies": {
     "electron": "^13.1.7",
     "electron-builder": "^23.6.0"
@@ -34,11 +33,11 @@
     "productName": "Portcullis",
     "directories": {
       "output": "dist"
-    },
-    "files": [
+    },    "files": [
       "main.js",
       "renderer.js",
       "index.html",
+      "extractUsage.js",
       "tool_usages.json",
       "package.json"
     ],
